@@ -12,6 +12,9 @@ include_recipe 'Bowtie'
 ##########################################################
 # here for use by serverspec
 
+magic_shell_environment 'TOPHAT_VERSION' do
+  value node['TopHat']['version']
+end
 
 ##########################################################
 # package install
