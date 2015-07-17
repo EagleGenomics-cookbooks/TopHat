@@ -4,10 +4,14 @@ https://ccb.jhu.edu/software/tophat/index.shtml
 
 Description
 ===========
+This Cookbook to installs TopHat.
+
 TopHat is a fast splice junction mapper for RNA-Seq reads. It aligns RNA-Seq reads to 
 mammalian-sized genomes using the ultra high-throughput short read aligner 
 Bowtie, and then analyzes the mapping results to identify splice junctions 
-between exons. 
+between exons.
+
+https://ccb.jhu.edu/software/tophat/index.shtml 
 
 Requirements
 ============
@@ -23,7 +27,29 @@ Notes
 
 Usage
 =====
+Simply include the recipe wherever you would like it installed, such as a run list (recipe[TopHat]) or a cookbook (include_recipe 'TopHat')
 
+## Testing
+To test the recipe we use chef test kitchen:
+
+kitchen converge default-centos65 
+
+kitchen login default-centos65
+
+kitchen verify default-centos65
+
+kitchen destroy default-centos65
+
+Attributes
+==========
+See attributes/default.rb for default values.
+
+default['TopHat']['version']
+default['Bowtie']['version'] = '1.1.1'
+
+default['boost-source']['major_ver'] = '1'
+default['boost-source']['minor_ver'] = '58'
+default['boost-source']['patch_ver'] = '0'
 
 License and Authors
 ===================
