@@ -31,21 +31,25 @@ remote_file "#{Chef::Config[:file_cache_path]}/#{node['TopHat']['filename']}" do
   action :create_if_missing
 end
 
-execute "tar zxvf #{Chef::Config[:file_cache_path]}/#{node['TopHat']['filename']} -C #{node['TopHat']['install_dir']}" do
+execute 'un-tar TopHat tar ball' do
+  command "tar zxvf #{Chef::Config[:file_cache_path]}/#{node['TopHat']['filename']} -C #{node['TopHat']['install_dir']}"
   not_if { ::File.exist?("#{node['TopHat']['dir']}/README") }
 end
 
-execute "./configure --with-boost=/usr/local" do
+execute 'Configure with location of boost files'  do
+  command './configure --with-boost=/usr/local'
   cwd node['TopHat']['dir']
   not_if { ::File.exist?("#{node['TopHat']['dir']}/Makefile") }
 end
 
-execute "make" do
+execute 'TopHat make' do
+  command 'make'
   cwd node['TopHat']['dir']
   not_if { ::File.exist?("#{node['TopHat']['dir']}/src/tophat") }
 end
 
-execute "make install" do
+execute 'TopHat make install' do
+  command 'make install'
   cwd node['TopHat']['dir']
   not_if { ::File.exist?("#{node['TopHat']['install_dir']}/bin/tophat") }
 end
