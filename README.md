@@ -55,7 +55,10 @@ License and Authors
 ===================
 
 * Authors:: Bart Ailey (<chef@eaglegenomics.com>)
+* Authors:: Dan Barrel (<chef@eaglegenomics.com>)
+* Authors:: Nick James (<chef@eaglegenomics.com>)
     
+
 Copyright:: 2015, Eagle Genomics Ltd
     
 Licensed under the Apache License, Version 2.0 (the "License");
