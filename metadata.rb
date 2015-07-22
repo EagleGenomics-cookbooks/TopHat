@@ -10,4 +10,3 @@ depends 'build-essential'
 depends 'boost-source'
 depends 'magic_shell'
 depends 'Bowtie'
-
