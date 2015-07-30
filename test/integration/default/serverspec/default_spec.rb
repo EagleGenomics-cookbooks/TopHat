@@ -31,8 +31,12 @@ end
   describe command("which #{file_executable}") do
     its(:exit_status) { should eq 0 }
   end
+end
 
-  describe command("#{file_executable} -version") do
+%w(
+  tophat2
+  tophat).each do |file_executable|
+  describe command("#{file_executable} -v") do
     its(:stdout) { should contain(ENV['TOPHAT_VERSION']) }
   end
 end
