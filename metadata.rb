@@ -4,7 +4,7 @@ maintainer_email 'chef@eaglegenomics.com'
 license 'all_rights'
 description 'Installs/Configures TopHat'
 long_description 'Installs/Configures TopHat'
-version '0.1.0'
+version '1.0.1'
 
 depends 'build-essential'
 depends 'boost-source'
