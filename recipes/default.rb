@@ -36,7 +36,7 @@ execute 'un-tar TopHat tar ball' do
   not_if { ::File.exist?("#{node['TopHat']['dir']}/README") }
 end
 
-execute 'Configure with location of boost files'  do
+execute 'Configure with location of boost files' do
   command './configure --with-boost=/usr/local'
   cwd node['TopHat']['dir']
   not_if { ::File.exist?("#{node['TopHat']['dir']}/Makefile") }
