@@ -6,7 +6,11 @@
 ##########################################################
 # package install
 
-package ['zlib-devel', 'tar', 'make', 'epel-release', 'clang'] do
+package ['zlib-devel', 'tar', 'make', 'epel-release'] do
+  action :install
+end
+
+package ['clang'] do
   action :install
 end
 
