@@ -4,6 +4,13 @@
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 ##########################################################
+# package install
+
+package ['zlib-devel', 'tar', 'make', 'epel-release', 'clang'] do
+  action :install
+end
+
+##########################################################
 
 include_recipe 'build-essential'
 include_recipe 'boost-source'
@@ -14,13 +21,6 @@ include_recipe 'Bowtie'
 
 magic_shell_environment 'TOPHAT_VERSION' do
   value node['TopHat']['version']
-end
-
-##########################################################
-# package install
-
-package ['zlib-devel'] do
-  action :install
 end
 
 ##########################################################
