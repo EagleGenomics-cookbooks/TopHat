@@ -6,10 +6,11 @@
 ##########################################################
 # package install
 
-package ['zlib-devel', 'tar', 'make', 'epel-release'] do
+package ['zlib-devel', 'tar', 'epel-release'] do
   action :install
 end
 
+# This needs to be installed after epel-release repo is added
 package ['clang'] do
   action :install
 end
