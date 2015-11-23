@@ -19,12 +19,10 @@ Requirements
 ## Platform:
 
 * Centos 6.5
-* RHEL 6.5
 
 Notes
 =====
-This TopHat installs its own version of samtools, bit it addes the version to the program name (i.e. samtools_VERSION) so there
-should not be a conflict. 
+This TopHat installs its own version of samtools, but it adds the version to the program name (i.e. samtools_VERSION) so there should not be a conflict. 
 
 Usage
 =====
