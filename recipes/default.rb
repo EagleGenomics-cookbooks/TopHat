@@ -2,7 +2,7 @@
 # Cookbook Name:: TopHat
 # Recipe:: default
 #
-# Copyright (c) 2015 The Authors, All Rights Reserved.
+# Copyright (c) 2016 Eagle Genomics Ltd, Apache License, Version 2.0.
 ##########################################################
 # package install
 
