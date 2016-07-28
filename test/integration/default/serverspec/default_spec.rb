@@ -27,7 +27,8 @@ end
   contig_to_chr_coords
   bed_to_juncs
   sra_to_solid
-  tophat-fusion-post).each do |file_executable|
+  tophat-fusion-post
+).each do |file_executable|
   describe command("which #{file_executable}") do
     its(:exit_status) { should eq 0 }
   end
@@ -35,7 +36,8 @@ end
 
 %w(
   tophat2
-  tophat).each do |file_executable|
+  tophat
+).each do |file_executable|
   describe command("#{file_executable} -v") do
     its(:stdout) { should contain(ENV['TOPHAT_VERSION']) }
   end
