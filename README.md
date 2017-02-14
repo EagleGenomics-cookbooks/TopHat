@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/EagleGenomics-cookbooks/TopHat.svg?branch=master)](https://travis-ci.org/EagleGenomics-cookbooks/TopHat)
+
 # TopHat
 
 https://ccb.jhu.edu/software/tophat/index.shtml
@@ -6,12 +8,12 @@ Description
 ===========
 This Cookbook installs TopHat.
 
-TopHat is a fast splice junction mapper for RNA-Seq reads. It aligns RNA-Seq reads to 
-mammalian-sized genomes using the ultra high-throughput short read aligner 
-Bowtie, and then analyzes the mapping results to identify splice junctions 
+TopHat is a fast splice junction mapper for RNA-Seq reads. It aligns RNA-Seq reads to
+mammalian-sized genomes using the ultra high-throughput short read aligner
+Bowtie, and then analyzes the mapping results to identify splice junctions
 between exons.
 
-https://ccb.jhu.edu/software/tophat/index.shtml 
+https://ccb.jhu.edu/software/tophat/index.shtml
 
 Requirements
 ============
@@ -22,7 +24,7 @@ Requirements
 
 Notes
 =====
-This TopHat installs its own version of samtools, but it adds the version to the program name (i.e. samtools_VERSION) so there should not be a conflict. 
+This TopHat installs its own version of samtools, but it adds the version to the program name (i.e. samtools_VERSION) so there should not be a conflict.
 
 Usage
 =====
@@ -31,7 +33,7 @@ Simply include the recipe wherever you would like it installed, such as a run li
 ## Testing
 To test the recipe we use chef test kitchen:
 
-kitchen converge default-centos65 
+kitchen converge default-centos65
 
 kitchen login default-centos65
 
@@ -56,10 +58,10 @@ License and Authors
 * Authors:: Bart Ailey (<chef@eaglegenomics.com>)
 * Authors:: Dan Barrell (<chef@eaglegenomics.com>)
 * Authors:: Nick James (<chef@eaglegenomics.com>)
-    
+
 
 Copyright:: 2016, Eagle Genomics Ltd, Apache License, Version 2.0
-    
+
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
@@ -71,8 +73,6 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-    
+
 ToDo
 ====
-
-
