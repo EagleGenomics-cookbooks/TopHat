@@ -23,7 +23,7 @@ before_script:
 - chef gem install kitchen-docker
 - "/opt/chefdk/bin/chef exec rake tests"
 script:
-- KITCHEN_LOCAL_YAML=.kitchen.docker.yml /opt/chefdk/embedded/bin/kitchen verify ${INSTANCE}
+- KITCHEN_LOCAL_YAML=.kitchen.docker.yml travis_wait 30 /opt/chefdk/embedded/bin/kitchen verify ${INSTANCE}
 notifications:
   slack:
     secure: CwAkcoaCmGyNxCvUFl/EvRgJAZhlJQ9Um7d8T9xkD2xT3nlEBStYDt93h3g2F6ItTrhJu5xjOq0in1KP9iahIKs2xNuwGyv1Ia4TudTziNh95G3CuNWUI1GEEVobRNCgztm7sX6XNNTtHzYGlI9RUfj29jctv4pQH0Fr7v9BBIV8I8b6OfOZY1XnC+8YMhdzC7zN3khHp1r8DEhkm4e+pcCEYLrrOFTH9m9Z/yAot9D9gLe6m7L+hxJbUBNG+8vB3bWz316A/nlAqOQ7E7ucUVLxWysH226+KzRuOLUWi4WmNPek58kLyVAdrR/RAhsWqd9Fjfs5xiFYCUlAWiWmfiOE60Rq+1K1wxpFnac1hQObG9E634rcVwOLbkD64ZKWqbLpkqCmUG3um8kExmYANe06TnOYKoLrEtmRorb+Pg8WTq2fUKh/lUTBvjII/jGTNJcLRHyaf+3x2IWe5a+X1a85OtKgt9/KllrVMDfSVW+n+AiWXLMMmrGjGZFvW7HDvOb6JlTOc6tjV9EFyuK1sj/U5sgsMj1TRlsB5hle77qBImsO4LPOtKavIVfXiTBs6Nfw2lZmghkzxrj8igroJFyNgmGwIFxBW6oc9sJBeZd6LBazOtHvK+9pn52vydxjaQn6Hh96oJyjaDf9+T2oCQnH4UFKEuOsFxl9RAqZe5o=
