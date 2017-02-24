@@ -10,6 +10,6 @@ source_url 'https://github.com/EagleGenomics-cookbooks/TopHat'
 issues_url 'https://github.com/EagleGenomics-cookbooks/TopHat/issues'
 
 depends 'build-essential'
-depends 'boost-source'
+depends 'boost'
 depends 'magic_shell'
 depends 'Bowtie'

@@ -18,7 +18,7 @@ end
 ##########################################################
 
 include_recipe 'build-essential'
-include_recipe 'boost-source'
+include_recipe 'boost'
 include_recipe 'Bowtie'
 
 ##########################################################

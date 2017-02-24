@@ -1,7 +1,4 @@
 #################################################
-default['boost-source']['major_ver'] = '1'
-default['boost-source']['minor_ver'] = '58'
-default['boost-source']['patch_ver'] = '0'
 default['Bowtie']['version'] = '1.1.1'
 #################################################
 default['TopHat']['version'] = '2.0.13'
